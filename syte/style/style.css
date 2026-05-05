@@ -1,0 +1,228 @@
+/* style.css – стиль "Обитель сокровищ и дневник путешественника" */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+    background: #2b2118; /* тёмное дерево по краям */
+    background-image: radial-gradient(circle at 25% 40%, rgba(80, 50, 30, 0.3) 2%, transparent 2.5%);
+    background-size: 30px 30px;
+    color: #2c241a;
+    line-height: 1.5;
+}
+
+/* пергаментная основа для контента */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+section {
+    background: #fdf8ed; /* цвет старой бумаги */
+    background-image: linear-gradient(to bottom, rgba(230, 210, 170, 0.1), rgba(200, 170, 120, 0.2));
+    border-radius: 4px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3), inset 0 0 0 1px rgba(255, 245, 215, 0.8);
+    border-left: 6px solid #c9a03d;
+    position: relative;
+}
+
+section::before {
+    content: "✧";
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    font-size: 2rem;
+    color: #c9a03d;
+    background: #fdf8ed;
+    padding: 0 0.5rem;
+    font-family: serif;
+}
+
+header {
+    background: #2c241a;
+    padding: 2rem 1rem;
+    text-align: center;
+    border-bottom: 3px solid #c9a03d;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    color: #ecd9b4;
+    text-shadow: 2px 2px 0 #4a2a1a, 4px 4px 0 rgba(0,0,0,0.3);
+    letter-spacing: 2px;
+}
+
+header p {
+    color: #d6b575;
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+nav {
+    margin-top: 1.5rem;
+}
+
+nav a {
+    font-family: 'Cormorant Garamond', serif;
+    text-decoration: none;
+    color: #ecd9b4;
+    margin: 0 0.8rem;
+    padding: 0.4rem 1rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+    border: 1px solid #c9a03d;
+    border-radius: 30px;
+    background: rgba(44, 36, 26, 0.7);
+    transition: all 0.3s;
+}
+
+nav a:hover {
+    background: #c9a03d;
+    color: #2c241a;
+    border-color: #ecd9b4;
+    box-shadow: 0 0 8px #c9a03d;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #5e2a2a;
+    border-bottom: 2px solid #c9a03d;
+    display: inline-block;
+    padding-right: 1rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+h3 {
+    font-family: 'Playfair Display', serif;
+    color: #7a4c2c;
+    margin: 1.2rem 0 0.8rem;
+    font-size: 1.5rem;
+}
+
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.8rem;
+    justify-content: center;
+}
+
+.team-card {
+    background: #fff7ed;
+    border: 1px solid #dbb879;
+    padding: 1.2rem;
+    flex: 1 1 220px;
+    border-radius: 12px;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.team-card:hover {
+    transform: translateY(-6px);
+    border-color: #c9a03d;
+}
+
+.team-name {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #2c4b3b;
+}
+
+.team-role {
+    color: #a5612a;
+    font-style: italic;
+    margin: 0.5rem 0;
+}
+
+.journal-post {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed #c9a03d;
+}
+
+.journal-date {
+    font-family: monospace;
+    background: #2c241a;
+    color: #ecd9b4;
+    display: inline-block;
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.resource-list {
+    list-style: none;
+}
+
+.resource-list li {
+    margin: 0.8rem 0;
+    padding-left: 1.5rem;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="%23c9a03d"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>') left center no-repeat;
+    background-size: 16px;
+}
+
+.resource-link {
+    color: #7a3e1f;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px dotted #c9a03d;
+}
+
+.resource-link:hover {
+    color: #c9a03d;
+}
+
+footer {
+    background: #1f1912;
+    color: #b8986a;
+    text-align: center;
+    padding: 1.2rem;
+    border-top: 2px solid #c9a03d;
+    font-size: 0.9rem;
+}
+
+img {
+    max-width: 100%;
+    border: 4px solid #dbb879;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    margin: 1rem 0;
+    background: #fdf8ed;
+}
+
+.btn {
+    display: inline-block;
+    background: #5e2a2a;
+    color: #ecd9b4;
+    padding: 0.5rem 1.5rem;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #c9a03d;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #c9a03d;
+    color: #2c241a;
+}
+
+@media (max-width: 768px) {
+    header h1 { font-size: 1.8rem; }
+    nav a { display: inline-block; margin: 0.3rem; font-size: 1rem; }
+    .team-grid { flex-direction: column; }
+    section { padding: 1.2rem; }
+    section::before { top: -12px; left: 15px; font-size: 1.4rem; }
+}
